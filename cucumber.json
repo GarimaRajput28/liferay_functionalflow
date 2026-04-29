@@ -1,8 +1,13 @@
 {
   "default": {
     "paths": ["features/**/*.feature"],
-    "require": ["support/**/*.ts", "test/**/*.ts", "*.spec.ts"],
+    "require": ["support/**/*.ts", "test/**/*.ts"],
     "requireModule": ["ts-node/register"],
-    "format": ["progress-bar", "html:reports/cucumber-report.html"]
+    "format": [
+      "progress-bar",
+      "html:reports/cucumber-report.html",
+      "json:reports/cucumber-report.json"
+    ],
+    "timeout": 30000
   }
 }

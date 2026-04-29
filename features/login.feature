@@ -10,4 +10,4 @@ Feature: User Login
     When I enter email "test@liferay.com"
     And I enter password "learn"
     And I click the Sign In button in the dialog
-    Then I should see the "Return to Full Page" link
+    Then I should see the home heading

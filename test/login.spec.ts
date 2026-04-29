@@ -30,6 +30,11 @@ When('I click the Sign In button in the dialog', async function (this: CustomWor
   await this.loginPage.submitSignIn();
 });
 
+Then('I should see the home heading', async function (this: CustomWorld) {
+  await this.loginPage.assertLoginSuccess();
+});
+
+// Keep these for future scenarios
 Then('I should see the {string} link', async function (this: CustomWorld, linkName: string) {
   await expect(this.page.getByRole('link', { name: linkName })).toBeVisible();
 });

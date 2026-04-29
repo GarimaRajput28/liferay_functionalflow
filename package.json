@@ -1,7 +1,8 @@
 {
   "scripts": {
     "test:bdd": "cucumber-js --config cucumber.json",
-    "test:bdd:headed": "cross-env HEADED=true cucumber-js --config cucumber.json"
+    "test:bdd:headed": "cross-env HEADED=true cucumber-js --config cucumber.json",
+    "report:open": "start reports/cucumber-report.html"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^12.8.2",

@@ -1,0 +1,144 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-login;successful-login-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Successful login with valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 319653800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on the Liferay DXP homepage",
+            "match": {
+              "location": "test\\login.spec.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1525208800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should see the Liferay DXP navigation link",
+            "match": {
+              "location": "test\\login.spec.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72384399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I click the \"Sign In\" button",
+            "match": {
+              "location": "test\\login.spec.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 632423100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "the Sign In dialog should be visible",
+            "match": {
+              "location": "test\\login.spec.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14287000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I enter email \"test@liferay.com\"",
+            "match": {
+              "location": "test\\login.spec.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1681763199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I enter password \"learn\"",
+            "match": {
+              "location": "test\\login.spec.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 532508200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click the Sign In button in the dialog",
+            "match": {
+              "location": "test\\login.spec.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 581907200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see the home heading",
+            "match": {
+              "location": "test\\login.spec.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18072600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 28782400
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "User Login",
+    "tags": [],
+    "uri": "features\\login.feature"
+  }
+]

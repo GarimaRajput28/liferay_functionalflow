@@ -7,7 +7,7 @@ export class LoginPage {
   readonly emailInput: Locator;
   readonly passwordInput: Locator;
   readonly dialogSignInButton: Locator;
-  readonly returnToFullPageLink: Locator;
+  readonly homepage: Locator;
   readonly liferayDXPLink: Locator;
 
   constructor(page: Page) {
@@ -18,7 +18,7 @@ export class LoginPage {
     this.emailInput           = page.getByRole('textbox', { name: 'Email Address' });
     this.passwordInput        = page.getByRole('textbox', { name: 'Password' });
     this.dialogSignInButton   = page.getByLabel('Sign In- Loading').getByRole('button', { name: 'Sign In' });
-    this.returnToFullPageLink = page.getByRole('link', { name: 'Return to Full Page' });
+    this.homepage = page.locator('span').filter({ hasText: 'Home' }).first();
   }
 
   async navigate(url = 'http://localhost:8081/') {
@@ -49,6 +49,6 @@ export class LoginPage {
   }
 
   async assertLoginSuccess() {
-    await expect(this.returnToFullPageLink).toBeVisible();
+    await expect(this.homepage).toBeVisible();
   }
 }
