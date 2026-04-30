@@ -4,121 +4,82 @@
     "elements": [
       {
         "description": "",
-        "id": "user-login;successful-login-with-valid-credentials",
+        "id": "web-content-creation;create-a-web-content-with-admin-user",
         "keyword": "Scenario",
         "line": 6,
-        "name": "Successful login with valid credentials",
+        "name": "Create a web content with Admin user",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 319653800
+              "duration": 198827600
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 4,
-            "name": "I am on the Liferay DXP homepage",
+            "name": "I am logged in as Admin",
             "match": {
-              "location": "test\\login.spec.ts:5"
+              "location": "test\\commonstep.spec.ts:7"
             },
             "result": {
               "status": "passed",
-              "duration": 1525208800
+              "duration": 4725705600
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 7,
-            "name": "I should see the Liferay DXP navigation link",
+            "name": "I should see the product menu",
             "match": {
-              "location": "test\\login.spec.ts:9"
+              "location": "test\\webcontent.spec.ts:6"
             },
             "result": {
               "status": "passed",
-              "duration": 72384399
+              "duration": 5118997699
             }
           },
           {
             "arguments": [],
-            "keyword": "When ",
+            "keyword": "Then ",
             "line": 8,
-            "name": "I click the \"Sign In\" button",
+            "name": "I should able to see Content & Data menu",
             "match": {
-              "location": "test\\login.spec.ts:13"
+              "location": "test\\webcontent.spec.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 632423100
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 9,
-            "name": "the Sign In dialog should be visible",
-            "match": {
-              "location": "test\\login.spec.ts:17"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 14287000
+              "duration": 815472499
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 10,
-            "name": "I enter email \"test@liferay.com\"",
+            "line": 9,
+            "name": "I click on Content & Data menu",
             "match": {
-              "location": "test\\login.spec.ts:21"
+              "location": "test\\webcontent.spec.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 1681763199
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 11,
-            "name": "I enter password \"learn\"",
-            "match": {
-              "location": "test\\login.spec.ts:25"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 532508200
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 12,
-            "name": "I click the Sign In button in the dialog",
-            "match": {
-              "location": "test\\login.spec.ts:29"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 581907200
+              "duration": 1770815799
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 13,
-            "name": "I should see the home heading",
+            "line": 10,
+            "name": "I should able to see Web content folder",
             "match": {
-              "location": "test\\login.spec.ts:33"
+              "location": "test\\webcontent.spec.ts:19"
             },
             "result": {
               "status": "passed",
-              "duration": 18072600
+              "duration": 1035172300
             }
           },
           {
@@ -126,7 +87,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 28782400
+              "duration": 6159776799
             }
           }
         ],
@@ -134,11 +95,11 @@
         "type": "scenario"
       }
     ],
-    "id": "user-login",
+    "id": "web-content-creation",
     "line": 1,
     "keyword": "Feature",
-    "name": "User Login",
+    "name": "Web Content Creation",
     "tags": [],
-    "uri": "features\\login.feature"
+    "uri": "features\\webcontent.feature"
   }
 ]

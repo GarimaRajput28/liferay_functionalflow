@@ -1,15 +1,15 @@
 {
   "scripts": {
-    "test:bdd": "cucumber-js --config cucumber.json",
-    "test:bdd:headed": "cross-env HEADED=true cucumber-js --config cucumber.json",
-    "report:open": "start reports/cucumber-report.html"
+    "test:bdd": "cross-env HEADED=true cucumber-js --config cucumber.json features/",
+    "test:login": "cross-env HEADED=true cucumber-js --config cucumber.json features/login.feature",
+    "test:webcontent": "cross-env HEADED=true cucumber-js --config cucumber.json features/webcontent.feature"
   },
   "devDependencies": {
-    "@cucumber/cucumber": "^12.8.2",
-    "@playwright/test": "^1.59.1",
-    "@types/node": "^25.6.0",
-    "cross-env": "^10.1.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "@cucumber/cucumber": "^10.0.0",
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.0.0",
+    "cross-env": "^7.0.3",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
   }
 }

@@ -1,4 +1,5 @@
 import { Page, Locator, expect } from '@playwright/test';
+import { config } from '../support/config';
 
 export class LoginPage {
   readonly page: Page;
@@ -11,18 +12,18 @@ export class LoginPage {
   readonly liferayDXPLink: Locator;
 
   constructor(page: Page) {
-    this.page                 = page;
-    this.liferayDXPLink       = page.getByRole('link', { name: 'Liferay DXP' });
-    this.signInNavButton      = page.getByRole('button', { name: 'Sign In' });
-    this.signInDialog         = page.getByRole('dialog', { name: 'Sign In - Loading' });
-    this.emailInput           = page.getByRole('textbox', { name: 'Email Address' });
-    this.passwordInput        = page.getByRole('textbox', { name: 'Password' });
-    this.dialogSignInButton   = page.getByLabel('Sign In- Loading').getByRole('button', { name: 'Sign In' });
+    this.page = page;
+    this.liferayDXPLink = page.getByRole('link', { name: 'Liferay DXP' });
+    this.signInNavButton = page.getByRole('button', { name: 'Sign In' });
+    this.signInDialog = page.getByRole('dialog', { name: 'Sign In - Loading' });
+    this.emailInput = page.getByRole('textbox', { name: 'Email Address' });
+    this.passwordInput = page.getByRole('textbox', { name: 'Password' });
+    this.dialogSignInButton = page.getByLabel('Sign In- Loading').getByRole('button', { name: 'Sign In' });
     this.homepage = page.locator('span').filter({ hasText: 'Home' }).first();
   }
 
-  async navigate(url = 'http://localhost:8081/') {
-    await this.page.goto(url);
+  async navigate() {
+    await this.page.goto(config.baseUrl);  // ← single source of truth
   }
 
   async assertHomePageLoaded() {
