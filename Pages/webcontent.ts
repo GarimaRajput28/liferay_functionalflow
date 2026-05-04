@@ -8,26 +8,41 @@ export class WebContentPage {
   readonly passwordInput: Locator;
   readonly dialogSignInButton: Locator;
   readonly homeHeading: Locator;
+  readonly newButton: Locator;
+  readonly basicWebContentLink: Locator;
+  readonly basicWebContentOption: Locator;
+  readonly webContentForm: Locator;
+
 
   constructor(page: Page) {
     this.page = page;
 
-    // ✅ Product menu toggle button (try multiple selectors for robustness)
+    // Product menu toggle button (try multiple selectors for robustness)
     this.productMenuToggle = this.page.getByLabel('Product Menu', { exact: true }).getByText('Liferay DXP');
-    // ✅ Content & Data — menuitem role in the left panel
+    // Content & Data — menuitem role in the left panel
     this.contentAndDataMenu = this.page.getByRole('menuitem', { name: 'Content & Data' });
 
-    // ✅ Web Content sub-link under Content & Data
+    //  Web Content sub-link under Content & Data
     this.webContentLink = page.getByRole('menuitem', { name: 'Web Content' });
 
-    // ✅ Password and Sign In (used by shared steps via loginPage,
+    //  Password and Sign In (used by shared steps via loginPage,
     //    but kept here in case webContentPage needs them directly)
     this.passwordInput = page.getByRole('textbox', { name: 'Password' });
     this.dialogSignInButton = page.getByLabel('Sign In- Loading')
       .getByRole('button', { name: 'Sign In' });
 
-    // ✅ Home span after login
+    // Home span after login
     this.homeHeading = page.locator('span').filter({ hasText: 'Home' }).first();
+
+    this.newButton = page.getByRole('button', { name: 'New' }).first();
+
+    this.basicWebContentLink = page.getByRole('menuitem', { name: /Basic Web Content/i }).first();
+
+    this.basicWebContentOption = page.getByRole('menuitem', { name: 'Basic Web Content' });
+
+
+
+    this.webContentForm = page.getByRole('form', { name: 'Web Content' });  
   }
 
   async navigate(url = 'http://localhost:8081/') {

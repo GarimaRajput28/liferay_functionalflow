@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 198827600
+              "duration": 433915799
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4725705600
+              "duration": 5193007800
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5118997699
+              "duration": 12945567600
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 815472499
+              "duration": 1250904399
             }
           },
           {
@@ -66,7 +66,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1770815799
+              "duration": 2737508899
             }
           },
           {
@@ -79,7 +79,56 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1035172300
+              "duration": 2195259500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I click on Web content folder",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I click on New",
+            "match": {
+              "location": "test\\webcontent.spec.ts:23"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I click on menu item Basic Web content option",
+            "match": {
+              "location": "test\\webcontent.spec.ts:27"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I am able to view a Form",
+            "match": {
+              "location": "test\\webcontent.spec.ts:30"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -87,7 +136,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 6159776799
+              "duration": 18503613900
             }
           }
         ],

@@ -8,3 +8,7 @@ Feature: Web Content Creation
     Then I should able to see Content & Data menu
     When I click on Content & Data menu
     Then I should able to see Web content folder
+    Then I click on Web content folder
+    Then I click on New
+    Then I click on menu item Basic Web content option
+    Then I am able to view a Form

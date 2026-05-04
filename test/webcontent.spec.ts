@@ -17,5 +17,19 @@ When('I click on Content & Data menu', async function (this: CustomWorld) {
 });
 
 Then('I should able to see Web content folder', async function (this: CustomWorld) {
-  await this.webContentPage.webContentLink.isVisible();
+  await this.webContentPage.webContentLink.click();
+
 });
+Then('I click on New', async function (this: CustomWorld) {
+  await this.webContentPage.newButton.click();
+});
+
+Then('I click on menu item Basic Web content option', async function (this: CustomWorld) {
+  await this.webContentPage.basicWebContentOption.click();
+});
+Then('I am able to view a Form', async function (this: CustomWorld) {
+  await this.webContentPage.webContentForm.isVisible();
+});
+
+
+
