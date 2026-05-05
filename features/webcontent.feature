@@ -3,7 +3,8 @@ Feature: Web Content Creation
   Background:
     Given I am logged in as Admin
 
-  Scenario: Create a web content with Admin user
+  Scenario: Create a Basic Web Content with Admin user
+    When I click on the product menu toggle
     Then I should see the product menu
     Then I should able to see Content & Data menu
     When I click on Content & Data menu
@@ -12,3 +13,8 @@ Feature: Web Content Creation
     Then I click on New
     Then I click on menu item Basic Web content option
     Then I am able to view a Form
+    When I fill in the Title field with "My First Web Content"
+    And I fill in the Content body with "This is the body of my web content."
+    And I click the Publish button
+    Then I should see the success message
+    And I should see "My First Web Content" listed in the Web Content list
