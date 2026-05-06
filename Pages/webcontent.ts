@@ -22,6 +22,8 @@ export class WebContentPage {
   readonly titleInput: Locator;
   readonly contentBodyEditor: Locator;
   readonly publishButton: Locator;
+  readonly publishWithpermissionsButton: Locator;
+  readonly publishOnPermisson: Locator;
 
   // ── Post-publish assertions ──────────────────────────────────────────────────
   readonly successMessage: Locator;
@@ -69,9 +71,17 @@ export class WebContentPage {
     // Publish button in the top-right action bar
     this.publishButton = page.getByRole('button', { name: 'Publish' });
 
+    // Publish with permissions button
+    this.publishWithpermissionsButton = page.getByRole('menuitem', { name: 'Publish With Permissions' });
+
+    //publish on permissions success message
+    this.publishOnPermisson = page.locator('button').filter({ hasText: 'Publish' }).last();
+
     // ── Success toast ──────────────────────────────────────────────────────────
     // Liferay DXP shows a clay alert toast on successful publish
-    this.successMessage = page.locator('.alert-success, .clay-alert-success').first();
+    this.successMessage = page.locator(
+      '[id="_com_liferay_journal_web_portlet_JournalPortlet_successMessageWithLink"]'
+    );
   }
 
   // ── Navigation helpers ───────────────────────────────────────────────────────
@@ -125,4 +135,23 @@ export class WebContentPage {
   async assertLoginSuccess() {
     await expect(this.homeHeading).toBeVisible({ timeout: 30_000 });
   }
+
+  // ── New method — extract title from toast and assert in list ──────────────────
+  async assertRecentlyCreatedWebContentVisible() {
+    // Wait for the success toast to appear
+    await expect(this.successMessage).toBeVisible({ timeout: 30_000 });
+
+    // Extract the dynamic title from the toast link (no hardcoding)
+    const toastLink = this.successMessage.getByRole('link').first();
+    const createdTitle = await toastLink.innerText();
+
+    // Assert the same title appears in the list table
+    const listItem = this.page
+      .getByTitle(createdTitle.trim(), { exact: true })
+      .first();
+    await expect(listItem).toBeVisible({ timeout: 30_000 });
+
+    return createdTitle.trim(); // return for logging if needed
+  }
 }
+

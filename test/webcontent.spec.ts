@@ -65,15 +65,14 @@ When('I fill in the Content body with {string}', async function (this: CustomWor
 
 // ── Step 11: Click Publish ────────────────────────────────────────────────────
 When('I click the Publish button', async function (this: CustomWorld) {
+  await this.page.pause(); // Debugging pause to inspect the page before clicking publish
   await this.webContentPage.publishButton.click();
+  await this.webContentPage.publishWithpermissionsButton.click();
+  await this.webContentPage.publishOnPermisson.click();
+
 });
 
-// ── Step 12: Assert success toast ────────────────────────────────────────────
-Then('I should see the success message', async function (this: CustomWorld) {
-  await this.webContentPage.assertSuccessMessageVisible();
-});
-
-// ── Step 13: Assert web content appears in list ───────────────────────────────
-Then('I should see {string} listed in the Web Content list', async function (this: CustomWorld, title: string) {
-  await this.webContentPage.assertWebContentInList(title);
+Then('I should see the recently created Web Content in the list', async function (this: CustomWorld) {
+  const title = await this.webContentPage.assertRecentlyCreatedWebContentVisible();
+  console.log(`✅ Verified web content created: "${title}"`);
 });
