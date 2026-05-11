@@ -1,15 +1,20 @@
 {
-  "scripts": {
-    "test:bdd": "cross-env HEADED=true cucumber-js --config cucumber.json features/",
-    "test:login": "cross-env HEADED=true cucumber-js --config cucumber.json features/login.feature",
-    "test:webcontent": "cross-env HEADED=true cucumber-js --config cucumber.json features/webcontent.feature"
-  },
+  "scripts": {"test:bdd": "cross-env HEADED=true cucumber-js --config cucumber.json features/",
+  "test:login": "cross-env HEADED=true cucumber-js --config cucumber.json features/login.feature",
+  "test:login:debug": "cross-env HEADED=true PWDEBUG=1 cucumber-js --config cucumber.json features/login.feature",
+  "test:webcontent": "cross-env HEADED=true cucumber-js --config cucumber.json features/webcontent.feature",
+  "test:webcontent:debug": "cross-env HEADED=true PWDEBUG=1 cucumber-js --config cucumber.json features/webcontent.feature",
+  "test:createpage": "cross-env HEADED=true cucumber-js --config cucumber.json features/createpage.feature",
+  "test:createpage:debug": "cross-env HEADED=true PWDEBUG=1 cucumber-js --config cucumber.json features/createpage.feature",
+  "test:bdd:debug": "cross-env HEADED=true PWDEBUG=1 cucumber-js --config cucumber.json features/",
+  "test:dry-run": "cucumber-js --config cucumber.json --dry-run"
+},
   "devDependencies": {
-    "@cucumber/cucumber": "^10.0.0",
-    "@playwright/test": "^1.40.0",
-    "@types/node": "^20.0.0",
-    "cross-env": "^7.0.3",
-    "ts-node": "^10.9.0",
-    "typescript": "^5.0.0"
-  }
+  "@cucumber/cucumber": "^10.0.0",
+  "@playwright/test": "^1.40.0",
+  "@types/node": "^20.0.0",
+  "cross-env": "^7.0.3",
+  "ts-node": "^10.9.0",
+  "typescript": "^5.0.0"
+}
 }

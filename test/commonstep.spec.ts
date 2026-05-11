@@ -34,3 +34,26 @@ Then('I should see the {string} link', async function (this: CustomWorld, linkNa
 Then('I should see an error message', async function (this: CustomWorld) {
   await expect(this.page.locator('.alert-danger, .portlet-msg-error')).toBeVisible({ timeout: 30000 });
 });
+
+When('I click on the product menu toggle', async function (this: CustomWorld) {
+  const modal = this.page
+    .locator('.liferay-modal.show')
+    .getByRole('button', { name: 'Close' })
+    .first();
+
+  if (await modal.isVisible().catch(() => false)) {
+    await modal.click();
+    await this.page.waitForSelector('.liferay-modal', {
+      state: 'hidden',
+      timeout: 5_000,
+    });
+  }
+  // Works for both pages since both have productMenuToggle locator
+  await this.page.locator('div').filter({ hasText: 'Liferay DXP' }).first().click();
+});
+
+Then('I should see the product menu', async function (this: CustomWorld) {
+  await expect(
+    this.page.getByRole('menuitem', { name: /Site Builder|Content & Data/ }).first()
+  ).toBeVisible({ timeout: 30_000 });
+});

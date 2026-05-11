@@ -8,14 +8,14 @@ import { CustomWorld } from '../support/world';
 
 // ── Step 1: Product menu is visible ──────────────────────────────────────────
 
-When('I click on the product menu toggle', async function (this: CustomWorld) {
+/*When('I click on the product menu toggle', async function (this: CustomWorld) {
   await this.webContentPage.productMenuToggle.click();
 });
 
 
 Then('I should see the product menu', async function (this: CustomWorld) {
   await this.webContentPage.productMenuToggle.click();
-});
+});*/
 
 // ── Step 2: Content & Data menu is visible ────────────────────────────────────
 Then('I should able to see Content & Data menu', async function (this: CustomWorld) {

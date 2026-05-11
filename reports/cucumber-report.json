@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "web-content-creation;create-a-basic-web-content-with-admin-user",
+        "id": "create-a-page-from-home;create-a-new-page-from-home-in-liferay-dxp",
         "keyword": "Scenario",
         "line": 6,
-        "name": "Create a Basic Web Content with Admin user",
+        "name": "Create a new page from Home in Liferay DXP",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 245289700
+              "duration": 1390437799
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4614086999
+              "duration": 18648073000
             }
           },
           {
@@ -36,11 +36,12 @@
             "line": 7,
             "name": "I click on the product menu toggle",
             "match": {
-              "location": "test\\webcontent.spec.ts:11"
+              "location": "test\\commonstep.spec.ts:38"
             },
             "result": {
-              "status": "passed",
-              "duration": 2117594199
+              "status": "failed",
+              "duration": 30010090599,
+              "error_message": "Error: function timed out, ensure the promise resolves within 30000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\Garima Rajput\\Desktop\\Projects\\Playwright_Automation\\vanilla\\node_modules\\@cucumber\\cucumber\\src\\time.ts:52:14)\n    at listOnTimeout (node:internal/timers:588:17)\n    at processTimers (node:internal/timers:523:7)"
             }
           },
           {
@@ -49,162 +50,186 @@
             "line": 8,
             "name": "I should see the product menu",
             "match": {
-              "location": "test\\webcontent.spec.ts:16"
+              "location": "test\\commonstep.spec.ts:55"
             },
             "result": {
-              "status": "passed",
-              "duration": 539377800
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 9,
-            "name": "I should able to see Content & Data menu",
-            "match": {
-              "location": "test\\webcontent.spec.ts:21"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 19013399
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 10,
-            "name": "I click on Content & Data menu",
+            "line": 9,
+            "name": "I click on Site Builder menu",
             "match": {
-              "location": "test\\webcontent.spec.ts:26"
+              "location": "test\\createpage.spec.ts:34"
             },
             "result": {
-              "status": "passed",
-              "duration": 576790399
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 11,
-            "name": "I should able to see Web content folder",
+            "line": 10,
+            "name": "I should see the Pages option",
             "match": {
-              "location": "test\\webcontent.spec.ts:31"
+              "location": "test\\createpage.spec.ts:39"
             },
             "result": {
-              "status": "passed",
-              "duration": 12363599
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I click on Pages",
+            "match": {
+              "location": "test\\createpage.spec.ts:44"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 12,
-            "name": "I click on Web content folder",
+            "name": "I should see the Pages list",
             "match": {
-              "location": "test\\webcontent.spec.ts:36"
+              "location": "test\\createpage.spec.ts:49"
             },
             "result": {
-              "status": "passed",
-              "duration": 552572899
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
-            "keyword": "Then ",
+            "keyword": "When ",
             "line": 13,
-            "name": "I click on New",
-            "match": {
-              "location": "test\\webcontent.spec.ts:41"
-            },
+            "name": "I click on the New button to create a New Page",
             "result": {
-              "status": "passed",
-              "duration": 566730499
+              "status": "undefined",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 14,
-            "name": "I click on menu item Basic Web content option",
+            "name": "I should see the page type selection panel",
             "match": {
-              "location": "test\\webcontent.spec.ts:46"
+              "location": "test\\createpage.spec.ts:60"
             },
             "result": {
-              "status": "passed",
-              "duration": 571212700
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 15,
-            "name": "I am able to view a Form",
-            "match": {
-              "location": "test\\webcontent.spec.ts:52"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 90821399
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 16,
-            "name": "I fill in the Title field with \"test Web Content\"",
+            "line": 15,
+            "name": "I select the Basic page type",
             "match": {
-              "location": "test\\webcontent.spec.ts:57"
+              "location": "test\\createpage.spec.ts:65"
             },
             "result": {
-              "status": "passed",
-              "duration": 1365987900
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
-            "keyword": "And ",
-            "line": 17,
-            "name": "I fill in the Content body with \"This is the body of my web content.\"",
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should see the page name input",
             "match": {
-              "location": "test\\webcontent.spec.ts:62"
+              "location": "test\\createpage.spec.ts:70"
             },
             "result": {
-              "status": "passed",
-              "duration": 1167042699
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I fill in the page name with \"My New Page\"",
+            "match": {
+              "location": "test\\createpage.spec.ts:75"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 18,
-            "name": "I click the Publish button",
+            "name": "I click the Add button",
             "match": {
-              "location": "test\\webcontent.spec.ts:67"
+              "location": "test\\createpage.spec.ts:80"
             },
             "result": {
-              "status": "passed",
-              "duration": 6356208599
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 19,
-            "name": "I should see the recently created Web Content in the list",
+            "name": "I should see the page design options",
             "match": {
-              "location": "test\\webcontent.spec.ts:75"
+              "location": "test\\createpage.spec.ts:85"
             },
             "result": {
-              "status": "passed",
-              "duration": 2798232899
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I click the Done button",
+            "match": {
+              "location": "test\\createpage.spec.ts:91"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should see \"My New Page\" in the pages list",
+            "match": {
+              "location": "test\\createpage.spec.ts:96"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
             "keyword": "After",
             "hidden": true,
             "result": {
-              "status": "passed",
-              "duration": 1412469099
+              "status": "failed",
+              "duration": 30004029799,
+              "error_message": "Error: function timed out, ensure the promise resolves within 30000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\Garima Rajput\\Desktop\\Projects\\Playwright_Automation\\vanilla\\node_modules\\@cucumber\\cucumber\\src\\time.ts:52:14)\n    at listOnTimeout (node:internal/timers:588:17)\n    at processTimers (node:internal/timers:523:7)"
             }
           }
         ],
@@ -212,11 +237,11 @@
         "type": "scenario"
       }
     ],
-    "id": "web-content-creation",
+    "id": "create-a-page-from-home",
     "line": 1,
     "keyword": "Feature",
-    "name": "Web Content Creation",
+    "name": "Create a Page from Home",
     "tags": [],
-    "uri": "features\\webcontent.feature"
+    "uri": "features\\createpage.feature"
   }
 ]

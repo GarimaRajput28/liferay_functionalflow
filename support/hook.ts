@@ -3,6 +3,7 @@ import { chromium, Browser, request } from '@playwright/test';
 import { CustomWorld } from './world';
 import { LoginPage } from '../Pages/login';
 import { WebContentPage } from '../Pages/webcontent';
+import { CreatePagePage } from '../Pages/createpage'; 
 
 setDefaultTimeout(30 * 1000);
 
@@ -34,6 +35,7 @@ Before(async function (this: CustomWorld) {
   this.page           = await this.context.newPage();
   this.loginPage      = new LoginPage(this.page);
   this.webContentPage = new WebContentPage(this.page);
+  this.createPagePage = new CreatePagePage(this.page);        
 });
 
 After(async function (this: CustomWorld) {
