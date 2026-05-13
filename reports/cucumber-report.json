@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 281662699
+              "duration": 311277500
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4881113400
+              "duration": 4826909199
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1157977999
+              "duration": 1153314300
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1925138000
+              "duration": 220831399
             }
           },
           {
@@ -62,11 +62,11 @@
             "line": 9,
             "name": "I click on Site Builder menu",
             "match": {
-              "location": "test\\createpage.spec.ts:34"
+              "location": "test\\createpage.spec.ts:6"
             },
             "result": {
               "status": "passed",
-              "duration": 581122900
+              "duration": 823070999
             }
           },
           {
@@ -75,11 +75,11 @@
             "line": 10,
             "name": "I should see the Pages option",
             "match": {
-              "location": "test\\createpage.spec.ts:39"
+              "location": "test\\createpage.spec.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 15181599
+              "duration": 16034400
             }
           },
           {
@@ -88,11 +88,37 @@
             "line": 11,
             "name": "I click on Pages",
             "match": {
-              "location": "test\\createpage.spec.ts:44"
+              "location": "test\\createpage.spec.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 632301799
+              "duration": 574387800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I click on New Button",
+            "match": {
+              "location": "test\\createpage.spec.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 548529900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see page templates set",
+            "match": {
+              "location": "test\\createpage.spec.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11057999
             }
           },
           {
@@ -100,7 +126,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 31861899
+              "duration": 31298600
             }
           }
         ],

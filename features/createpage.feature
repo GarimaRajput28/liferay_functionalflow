@@ -9,4 +9,6 @@ Feature: Create a Page from Home
     When I click on Site Builder menu
     Then I should see the Pages option
     When I click on Pages
+    Then I click on New Button
+    Then I should see page templates set
     
