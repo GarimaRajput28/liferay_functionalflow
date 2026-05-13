@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1390437799
+              "duration": 281662699
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 18648073000
+              "duration": 4881113400
             }
           },
           {
@@ -39,9 +39,8 @@
               "location": "test\\commonstep.spec.ts:38"
             },
             "result": {
-              "status": "failed",
-              "duration": 30010090599,
-              "error_message": "Error: function timed out, ensure the promise resolves within 30000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\Garima Rajput\\Desktop\\Projects\\Playwright_Automation\\vanilla\\node_modules\\@cucumber\\cucumber\\src\\time.ts:52:14)\n    at listOnTimeout (node:internal/timers:588:17)\n    at processTimers (node:internal/timers:523:7)"
+              "status": "passed",
+              "duration": 1157977999
             }
           },
           {
@@ -53,8 +52,8 @@
               "location": "test\\commonstep.spec.ts:55"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 1925138000
             }
           },
           {
@@ -66,8 +65,8 @@
               "location": "test\\createpage.spec.ts:34"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 581122900
             }
           },
           {
@@ -79,8 +78,8 @@
               "location": "test\\createpage.spec.ts:39"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 15181599
             }
           },
           {
@@ -92,144 +91,16 @@
               "location": "test\\createpage.spec.ts:44"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 12,
-            "name": "I should see the Pages list",
-            "match": {
-              "location": "test\\createpage.spec.ts:49"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 13,
-            "name": "I click on the New button to create a New Page",
-            "result": {
-              "status": "undefined",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 14,
-            "name": "I should see the page type selection panel",
-            "match": {
-              "location": "test\\createpage.spec.ts:60"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 15,
-            "name": "I select the Basic page type",
-            "match": {
-              "location": "test\\createpage.spec.ts:65"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 16,
-            "name": "I should see the page name input",
-            "match": {
-              "location": "test\\createpage.spec.ts:70"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 17,
-            "name": "I fill in the page name with \"My New Page\"",
-            "match": {
-              "location": "test\\createpage.spec.ts:75"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 18,
-            "name": "I click the Add button",
-            "match": {
-              "location": "test\\createpage.spec.ts:80"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 19,
-            "name": "I should see the page design options",
-            "match": {
-              "location": "test\\createpage.spec.ts:85"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 20,
-            "name": "I click the Done button",
-            "match": {
-              "location": "test\\createpage.spec.ts:91"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 21,
-            "name": "I should see \"My New Page\" in the pages list",
-            "match": {
-              "location": "test\\createpage.spec.ts:96"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 632301799
             }
           },
           {
             "keyword": "After",
             "hidden": true,
             "result": {
-              "status": "failed",
-              "duration": 30004029799,
-              "error_message": "Error: function timed out, ensure the promise resolves within 30000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\Garima Rajput\\Desktop\\Projects\\Playwright_Automation\\vanilla\\node_modules\\@cucumber\\cucumber\\src\\time.ts:52:14)\n    at listOnTimeout (node:internal/timers:588:17)\n    at processTimers (node:internal/timers:523:7)"
+              "status": "passed",
+              "duration": 31861899
             }
           }
         ],

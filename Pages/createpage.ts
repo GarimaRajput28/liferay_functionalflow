@@ -8,6 +8,8 @@ export class CreatePagePage {
   readonly siteBuilderMenu: Locator;
   readonly pagesLink: Locator;
 
+
+
   // ── Pages list toolbar ───────────────────────────────────────────────────────
   readonly addPageButton: Locator;
 
@@ -37,9 +39,11 @@ export class CreatePagePage {
     this.siteBuilderMenu = page.getByRole('menuitem', { name: 'Site Builder' });
 
     // Pages child link under Site Builder
-    this.pagesLink = page.locator(':text-is("Pages")');
+    this.pagesLink = page.locator('a').filter({ hasText: 'Pages' }).first();
+
 
     // ── Pages list ──────────────────────────────────────────────────────────────
+
     // "Add Page" button / icon in the management toolbar
     // Liferay 7.4 renders this as a button with a plus icon or "New Page" label
     this.addPageButton = page.locator('a:has-text("New")');
@@ -90,34 +94,4 @@ export class CreatePagePage {
     await expect(this.pagesLink).toBeVisible({ timeout: 30_000 });
   }
 
-  async assertPagesListVisible() {
-    await expect(this.pagesList).toBeVisible({ timeout: 30_000 });
-  }
-
-  async assertPageTypePanelVisible() {
-    await expect(this.pageTypePanel).toBeVisible({ timeout: 30_000 });
-  }
-
-  async assertPageNameInputVisible() {
-    await expect(this.pageNameInput).toBeVisible({ timeout: 30_000 });
-  }
-
-  async assertPageDesignOptionsVisible() {
-    await expect(this.pageDesignOptions).toBeVisible({ timeout: 30_000 });
-  }
-
-  async assertPageInList(pageName: string) {
-    // Scope search to pages list tree to avoid strict mode violations
-    const pageItem = this.pagesList
-      .getByRole('link', { name: pageName })
-      .first();
-    await expect(pageItem).toBeVisible({ timeout: 30_000 });
-  }
-
-  // ── Action helpers ───────────────────────────────────────────────────────────
-
-  async fillPageName(name: string) {
-    await this.pageNameInput.click();
-    await this.pageNameInput.fill(name);
-  }
 }
