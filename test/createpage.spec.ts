@@ -24,3 +24,16 @@ Then('I click on New Button', async function (this: CustomWorld) {
 Then('I should see page templates set', async function (this: CustomWorld) {
   await this.createPagePage.pagetemplate.isVisible();
 });
+
+Then('I click on Blank template', async function (this: CustomWorld) {
+  await this.createPagePage.blankTemplateOption.click();
+});
+
+When('I fill in the page name with {string}', async function (this: CustomWorld, pageName: string) {
+  await this.createPagePage.pageNameInput.click();
+  await this.createPagePage.pageNameInput.fill(pageName);
+});
+
+Then('I click on Add Button', async function (this: CustomWorld) {
+  await this.createPagePage.addButton.click();
+});

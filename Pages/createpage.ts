@@ -13,8 +13,18 @@ export class CreatePagePage {
   // ── Pages list toolbar ───────────────────────────────────────────────────────
   readonly newButton: Locator;
 
-  
+
   readonly pagetemplate: Locator;
+  // Select page design options
+  
+  readonly blankTemplateOption: Locator;
+
+  // readonly pageNameField: Locator; // New page name field locator
+  readonly pageNameField: Locator; // New Add button locator
+
+  //Add button locator to add the page name after filling it in the field
+  readonly addButton: Locator;
+  readonly pageNameInput: Locator;
 
 
   constructor(page: Page) {
@@ -34,15 +44,27 @@ export class CreatePagePage {
     // ── Pages list ──────────────────────────────────────────────────────────────
 
     //New Butotn for create New page
-    this.newButton = page.locator('div').locator('a').nth(1);
-
-
-
+    this.newButton = page.locator('a:has-text("New")');
+// Page template sets section in page design options
 
     this.pagetemplate = page.locator(':text-is("PAGE TEMPLATE SETS")');
+// Blank template option in page design options
+    
+    this.blankTemplateOption = page.locator('li:has-text("Blank")');
+
+    // provide page name field locator
+    this.pageNameField = page.getByText('Add Page', { exact: true });
+  
+    //Clik on Add button to add the page name
+    this.addButton = page
+  .frameLocator('#addLayoutDialog_iframe_')
+  .getByRole('button', { name: 'Add' })
+  .first();
 
 
-
+    this.pageNameInput = page
+  .frameLocator('#addLayoutDialog_iframe_')
+  .getByLabel('Name');
 
   }
 
@@ -55,6 +77,12 @@ export class CreatePagePage {
   async assertPagesOptionVisible() {
     await expect(this.pagesLink).toBeVisible({ timeout: 30_000 });
   }
-  
+  async assertBlankTemplateOptionVisible() {
+    await expect(this.blankTemplateOption).toBeVisible({ timeout: 30_000 });
+  }
+
+  async assertPageNameFieldVisible() {
+    await expect(this.pageNameField).toBeVisible({ timeout: 30_000 });
+  }
 
 }

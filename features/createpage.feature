@@ -11,4 +11,7 @@ Feature: Create a Page from Home
     When I click on Pages
     Then I click on New Button
     Then I should see page templates set
+    Then I click on Blank template
+    When I fill in the page name with "About Us"
+    Then I click on Add Button
     
